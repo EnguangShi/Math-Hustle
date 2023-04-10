@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div
+      id="inventory"
+      class="inventory"
+      ondrop="dropInventory(event)"
+      ondragover="allowDrop(event)"
+    >
+      <span id="1" class="item" draggable="true" ondragstart="drag(event)"
+        >1</span
+      >
+      <span id="2" class="item" draggable="true" ondragstart="drag(event)"
+        >2</span
+      >
+      <span id="plus" class="item" draggable="true" ondragstart="drag(event)"
+        >+</span
+      >
+      <span id="minus" class="item" draggable="true" ondragstart="drag(event)"
+        >-</span
+      >
+    </div>
+
+    <div id="game">
+      <span
+        id="cell1"
+        class="cell"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+        onclick="addMoney(event)"
+      ></span>
+      <span
+        id="cell2"
+        class="cell"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+        onclick="addMoney(event)"
+      ></span>
+      <span
+        id="cell3"
+        class="cell"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+        onclick="addMoney(event)"
+      ></span>
+      <span
+        id="cell4"
+        class="cell"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+        onclick="addMoney(event)"
+      ></span>
+      <span
+        id="cell5"
+        class="cell"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+        onclick="addMoney(event)"
+      ></span>
+      <span id="equalResult">
+        <p>
+          <span>= </span><span id="dollarSign">$</span
+          ><span id="result">invalid</span><span id="perSecond">/s</span>
+        </p>
+      </span>
+    </div>
+    <div id="totalMoney">0</div>
+
+    <script src="interaction.js"></script>
+    <script src="calculation.js"></script>
+  </body>
+</html>
